@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+
+import './styles/index.css';
+import './styles/common-styles.css';
+
 import Header from "./components/header";
 import Main from './components/main';
 import Footer from "./components/footer";

@@ -1,19 +1,23 @@
 import React from "react";
-import Time from './time';
+
+import '../styles/main-styles.css';
 
 import MainContent from "./main-content";
+import RangeTimeEvent from "./range-time-event";
 
 const Main = () => {
     return (
-        <main className="main-block">
-            <div className="wrapper">
-                <Time />
-                <MainContent />
+        <div>
+            <div className="main-block">
+                <div className="wrapper">
+                    <RangeTimeEvent />
+                    <MainContent />
+                </div>
             </div>
-        </main>
+        </div>
     )
 }
 
 export default Main;
 
-//обертка основого контента
+//обертка основого

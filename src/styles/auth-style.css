@@ -1,0 +1,133 @@
+.login-form {
+    width: 435px;
+    height: 589px;
+    border-radius: 10px;
+    background: #fff;
+    position: fixed;
+    z-index: 500;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 100px auto;
+    box-shadow:  0 0 0 9999px rgba(1, 1, 1, .8);
+}
+
+
+.enter {
+    color:#000;
+    font-size:24px;
+    text-align:center;
+    cursor: default;
+}
+
+.vk {
+    display:block;
+    width: 360px;
+    height: 56px;
+    margin:40px auto;
+    border: 2px solid #4A76A8;
+    border-radius: 10px;
+    outline:none;
+    font-size:16px;
+    color: #4A76A8;
+    background:#fff;
+    cursor:pointer;
+    position:relative;
+}
+
+.vk:before {
+    content:'';
+    position:absolute;
+    width:29px;
+    height:15px;
+    background:url('../img/vk_blue.svg');
+    left:100px;
+    top:18px;
+}
+.vk:hover {
+    background: #4A76A8;
+    color:#fff;
+}
+
+.vk:active {
+    background: #5C89BC;
+    border:1px solid #5C89BC;
+}
+
+.vk:hover:before {
+    content:'';
+    position:absolute;
+    width:29px;
+    height:15px;
+    background:url('../img/vk_white.svg');
+}
+
+.info-login {
+    margin-top:70px;
+}
+
+.info-login input {
+    display:block;
+    margin:12px auto;
+    width: 360px;
+    height: 56px;
+    background: #EDEDED;
+    border-radius: 10px;
+    outline:none;
+    border:1px solid #EDEDED;
+    padding:17px;
+    color:#000;
+    font-size:16px;
+}
+
+.info-login .iForgotPassword {
+    display:block;
+    color: #767676;
+    text-align:center;
+    padding-left:230px;
+}
+
+.iForgotPassword:hover {
+    color: #A54657;
+}
+
+.enter-button {
+    width: 359px;
+    height: 59px;
+    background: #A54657;
+    border-radius: 10px;
+    outline:none;
+    border:1px solid #A54657;
+    color:#fff;
+    font-size:16px;
+    display:block;
+    margin: 25px auto;
+    cursor:pointer;
+}
+
+.enter-button:hover {
+    background: #CD5268;
+    border:1px solid #CD5268;
+}
+
+.enter-button:active {
+    background: #DF667C;
+    border:1px solid #DF667C;
+}
+
+.registration {
+    cursor:pointer;
+    width: 227px;
+    height: 19px;
+    color:#767;
+    font-size:16px;
+    text-decoration:underline;
+    text-align:center;
+    margin:70px auto;
+}
+
+
+.registration:hover {
+    color:#000;
+}

@@ -1,11 +1,13 @@
 import React from "react";
-import About from "./about";
+import FooterAbout from "./footer-about";
+
+import '../styles/footer-styles.css';
 
 const Footer = () => {
     return (
         <footer>
             <div className="wrapper">
-            <About />
+            <FooterAbout />
             </div>
         </footer>
     )

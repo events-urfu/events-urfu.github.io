@@ -31,7 +31,7 @@ class ShowCardDescription extends React.Component {
                     {!this.state.isToggleCard &&
                     <div className='content' >
                         <div onClick={this.handleClickCard}>
-                            <img className='close' src={crossImage} />
+                            <img alt={'close'} className='close' src={crossImage} />
                         </div>{this.props.children}</div>}
                 </div>
             )

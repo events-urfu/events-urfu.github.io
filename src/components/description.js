@@ -2,13 +2,14 @@ import React from "react";
 
 import '../styles/description-style.css';
 
+import testPic from '../img/gradient.jpg';
 import Title from "./checkbox-label";
 import ButtonOnDescription from "./button-on-description";
 
 const Description = (props) => {
     return (
         <div className='description-block'>
-            <img className='description-pic' src='/#' />
+            <img className='description-pic' src={testPic} alt={'pic'} />
             <div className='data'>
                 <p className='data-name'>{props.name}</p>
                 <p className='data-time'>{props.time}</p>

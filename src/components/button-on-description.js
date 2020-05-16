@@ -48,8 +48,8 @@ class ButtonOnDescription extends React.Component {
             <div className='container-button'>
                 <button className='submit' onClick={this.handleClickShow}>{this.state.isSubmitted ? 'вы записаны' : 'записаться'}</button>
                 {!this.state.isClicked && <EventForm isSubmitted={this.state.isSubmitted} handleClickSubmit={this.handleClickSubmit}>{this.props.children}</EventForm>}
-                <div className='like' onClick={this.handleLike}><img src={this.state.isLiked ? liked  : notLiked}/></div>
-                <div className='share' onClick={this.handleShare}><img src={this.state.isShared ? shared : notShared}/></div>
+                <div className='like' onClick={this.handleLike}><img alt={'like'} src={this.state.isLiked ? liked  : notLiked}/></div>
+                <div className='share' onClick={this.handleShare}><img alt='share' src={this.state.isShared ? shared : notShared}/></div>
             </div>
         )
     }

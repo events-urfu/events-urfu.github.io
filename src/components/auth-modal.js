@@ -21,7 +21,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <li className="sign-in"><a onClick={this.showHidePopup}>Вход</a></li>
+                <li className="sign-in"><a href={'/#'} onClick={this.showHidePopup}>Вход</a></li>
                 {this.state.isShow ? <Authorisation/> : null}
             </div>
         );

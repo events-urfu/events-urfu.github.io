@@ -1,0 +1,77 @@
+footer {
+    min-height: 200px;
+    background: #000;
+    flex-shrink: 0;
+    margin-top:450px;
+    padding-bottom:0;
+}
+
+footer .wrapper div {
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    justify-content: space-around;
+}
+
+main {
+    flex-grow:1;
+}
+
+.website,
+.community {
+    width:40%;
+    color: #9C9C9C;
+    text-align:center;
+    font-size:16px;
+    padding-top:80px;
+}
+
+.find-us {
+    width:40%;
+    color: #9C9C9C;
+    text-align:center;
+    font-size:16px;
+    flex-direction: column;
+    margin:85px auto;
+    line-height:1px;
+}
+
+.find-us p {
+    margin-top: 5px;
+}
+
+.find-us p:first-child {
+    font-weight:600;
+    text-indent:-75px;
+}
+
+.find-us p:last-child {
+    text-indent:16px;
+}
+
+.community p,
+.website p {
+    position:relative;
+}
+
+.community p:before {
+    content:'';
+    height:40px;
+    width:40px;
+    position:absolute;
+    background: url("../img/social.svg") center no-repeat ;
+    background-size:cover;
+    left:-52px;
+    top:-7px;
+}
+
+.website p:before {
+    content:'';
+    height:40px;
+    width:40px;
+    position:absolute;
+    background: url("../img/internet.svg") center no-repeat;
+    background-size:cover;
+    left:-52px;
+    top:-7px;
+}

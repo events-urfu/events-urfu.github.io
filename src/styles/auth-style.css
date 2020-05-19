@@ -131,3 +131,17 @@
 .registration:hover {
     color:#000;
 }
+
+.overlay {
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    z-index:5;
+    margin:auto;
+    width:1350px;
+    height:100%;
+    position:fixed;
+}
+
+

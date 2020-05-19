@@ -104,6 +104,7 @@
     background:url("../img/gradient.jpg") center;
     background-size:cover;
     position:relative;
+    cursor:pointer;
 }
 
 .inside-container section {

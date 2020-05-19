@@ -66,8 +66,13 @@
     height:17px;
     background:url('../img/clock_1.svg') no-repeat;
     position:absolute;
-    left:2px;
+    left:1px;
     top:2px;
+}
+
+.checkbox-container {
+    position:relative;
+    right:2px;
 }
 
 .data-cab,
@@ -191,6 +196,7 @@
 .share {
     margin-left:30px;
     margin-top:25px;
+    cursor:pointer;
 }
 
 

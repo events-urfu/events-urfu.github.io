@@ -15,10 +15,12 @@ class Title extends React.Component {
 
     render() {
         return(
-            <label className='checkbox-text'>
-                <input onClick={this.changeTitle} type='checkbox' />
-                {!this.state.clicked ? 'напомнить мне' : 'вам на почту будет доставлено письмо'}
-            </label>
+            <div className='checkbox-container'>
+                <label className='checkbox-text'>
+                    <input onClick={this.changeTitle} type='checkbox' />
+                    {!this.state.clicked ? 'напомнить мне' : 'вам на почту будет доставлено письмо'}
+                </label>
+            </div>
         )
     }
 }

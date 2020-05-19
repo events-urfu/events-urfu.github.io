@@ -38,7 +38,7 @@ header .wrapper ul {
     margin-left: 10px;
 }
 
-.sign-in button {
+.sign-in a {
     outline:none;
     color:#000;
     display:block;
@@ -50,6 +50,7 @@ header .wrapper ul {
     margin:12px auto;
     line-height:36px;
     text-align: center;
+    cursor:pointer;
 }
 
 a .pic-logo {
@@ -58,11 +59,11 @@ a .pic-logo {
     left:10px;
 }
 
-.sign-in button:hover {
+.sign-in a:hover {
     background: #EDEDED;
 }
 
-.sign-in button:active {
+.sign-in a:active {
     background: #E3E3E3;
 }
 

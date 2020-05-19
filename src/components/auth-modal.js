@@ -4,6 +4,7 @@ import React from "react";
 
 import '../styles/auth-style.css';
 import '../styles/header-styles.css';
+import {Route, BrowserRouter, Switch} from "react-router-dom";
 
 class App extends React.Component {
 
@@ -21,8 +22,10 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <li className="sign-in"><button onClick={this.showHidePopup}>Вход</button></li>
-                {this.state.isShow ? <Authorisation/> : null}
+                <div>
+                    <li className="sign-in"><a href='/sign_up' onClick={this.showHidePopup}>Вход</a></li>
+                    {this.state.isShow ? <Authorisation /> : null}
+                </div>
             </div>
         );
     }

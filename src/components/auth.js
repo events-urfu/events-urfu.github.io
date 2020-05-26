@@ -18,8 +18,10 @@ class Authorisation extends React.Component {
         this.handleClickBackground = this.handleClickBackground.bind(this);
     }
 
-    handleClickBackground = () => {
-        this.setState( {isClickedOutside: !this.state.isClickedOutside})
+    handleClickBackground = (e) => {
+        if (e.target.className==='overlay' || e.target.className==='close authorisation') {
+            this.setState( {isClickedOutside: !this.state.isClickedOutside})
+        }
     }
 
     render() {

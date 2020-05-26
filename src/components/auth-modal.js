@@ -4,8 +4,12 @@ import React from "react";
 
 import '../styles/auth-style.css';
 import '../styles/header-styles.css';
-import {Route, BrowserRouter, Switch} from "react-router-dom";
+import {Route, BrowserRouter, Switch, Link, NavLink} from "react-router-dom";
 
+
+const style = {
+    color:'#000'
+}
 class App extends React.Component {
 
     constructor(props){
@@ -23,8 +27,12 @@ class App extends React.Component {
         return (
             <div>
                 <div>
-                    <li className="sign-in"><a href='/sign_up' onClick={this.showHidePopup}>Вход</a></li>
-                    {this.state.isShow ? <Authorisation /> : null}
+                    <BrowserRouter>
+                        <li onClick={this.showHidePopup} className="sign-in"><NavLink style={style} to='/sign_up'>Вход</NavLink></li>
+                        <Route path='/sign_up'>
+                            {this.state.isShow ? <Authorisation /> : null}
+                        </Route>
+                    </BrowserRouter>
                 </div>
             </div>
         );

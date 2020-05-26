@@ -27,7 +27,7 @@ header .wrapper ul {
     outline:none;
 }
 
-.sign-in button,
+.sign-in,
 .search {
     font-size:16px;
 }
@@ -38,8 +38,7 @@ header .wrapper ul {
     margin-left: 10px;
 }
 
-.sign-in a {
-    outline:none;
+.sign-in {
     color:#000;
     display:block;
     background: rgba(255, 255, 255, 0.4);
@@ -59,12 +58,13 @@ a .pic-logo {
     left:10px;
 }
 
-.sign-in a:hover {
+.sign-in:hover {
     background: #EDEDED;
 }
 
-.sign-in a:active {
+.sign-in:active {
     background: #E3E3E3;
+    color:#000;
 }
 
 .search:active,

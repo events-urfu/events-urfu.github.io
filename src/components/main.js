@@ -11,7 +11,7 @@ const Main = () => {
             <div className="main-block">
                 <div className="wrapper">
                     <RangeTimeEvent />
-                    <MainContent />
+                    <MainContent name={'foreach'} time={'1888'}/>
                 </div>
             </div>
         </div>

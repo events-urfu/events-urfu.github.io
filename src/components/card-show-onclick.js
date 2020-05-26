@@ -11,31 +11,33 @@ class ShowCardDescription extends React.Component {
 
 
     handleClickCard() {
-            this.setState({
-                isToggleCard: !this.state.isToggleCard
-            });
-            this.props.handleClick()
-        }
-
-        render() {
-            return (
-                <div>
-                    <section>
-                        {this.props.isToggleOn && <div className='element' onClick={this.handleClickCard}/>}
-                        <div className="event-name">NAME</div>
-                        <div className="out-block">
-                            <div className="event-time"><p>TIME</p></div>
-                            <div className="event-place"><p>PLACE</p></div>
-                        </div>
-                    </section>
-                    {!this.state.isToggleCard &&
-                    <div className='content' >
-                        <div onClick={this.handleClickCard}>
-                            <img alt={'close'} className='close' src={crossImage} />
-                        </div>{this.props.children}</div>}
-                </div>
-            )
-        }
+        this.setState({
+            isToggleCard: !this.state.isToggleCard
+        });
+        this.props.handleClick()
     }
+
+
+    render() {
+        return (
+            <div>
+                <section>
+                {this.props.isToggleOn && (<div className='element' onClick={this.handleClickCard}>
+                </div>)}
+                <div className="event-name">{this.props.name}</div>
+                <div className="out-block">
+                    <div className="event-time"><p>{this.props.time}</p></div>
+                    <div className="event-place"><p>{this.props.place}</p></div>
+                </div>
+                </section>
+                {!this.state.isToggleCard &&
+                <div className='content'>
+                    <div onClick={this.handleClickCard}>
+                        <img alt={'close'} className='close' src={crossImage}/>
+                    </div>
+                    {this.props.children}</div>}</div>
+        )
+    }
+}
 
 export default ShowCardDescription;

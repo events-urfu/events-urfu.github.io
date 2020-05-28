@@ -7,8 +7,6 @@ import './styles/common-styles.css';
 import Header from "./components/header";
 import Main from './components/main';
 import Footer from "./components/footer";
-import {BrowserRouter, Route} from "react-router-dom";
-
 
 class SiteView extends React.Component {
     render() {

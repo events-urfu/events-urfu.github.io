@@ -2,7 +2,6 @@ import React from "react";
 
 import '../styles/auth-style.css';
 import crossImage from "../img/close-cross.svg";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 const styles = {
     afterClick:{display:'none'},

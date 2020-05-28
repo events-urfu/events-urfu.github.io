@@ -4,7 +4,7 @@ import React from "react";
 
 import '../styles/auth-style.css';
 import '../styles/header-styles.css';
-import {Route, BrowserRouter, Switch, Link, NavLink} from "react-router-dom";
+import {Route, BrowserRouter, NavLink} from "react-router-dom";
 
 
 const style = {

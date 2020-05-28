@@ -1,18 +1,25 @@
 import React from "react";
 
+import * as axios from 'axios';
+
+import gradient from '../img/gradient.jpg';
 import ShowCardDescription from "./card-show-onclick";
 import Description from "./description";
-import {Link, Route, BrowserRouter} from "react-router-dom";
+import {Link, Route, BrowserRouter, Switch} from "react-router-dom";
 
 const styles = {
     color:'#000'
 }
 
+const apiURL = 'https://urfu-events-project.herokuapp.com/api/events/';
+const API2 = 'https://urfu-events-project.herokuapp.com/api/events/1';
+
 class MainContent extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isToggleOn: true
+            isToggleOn: true,
+            card:[]
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -23,6 +30,17 @@ class MainContent extends React.Component {
         });
     }
 
+    componentDidMount() {
+        // axios.get(`${axios.defaults.apiURL}`).then(response => {
+        //     const card = response.data;
+        //     this.setState({card});
+        // });
+        axios.get(apiURL).then(response => {
+            const card = response.data;
+            this.setState({card});
+        })
+    }
+
     render() {
             return (
                 <BrowserRouter>
@@ -30,34 +48,33 @@ class MainContent extends React.Component {
                         <div className="inside-container block active tab-1">
                             <div id='wrapp'>
                                 {
-                                    [
-                                        {key:1, title:"Мероприятие 1", date:'18:00', location:"Р-301", member:"1", description:'Описание 1'},
-                                        {key:2, title:"Мероприятие 2", date:'18:01', location:"Р-302", member:"11", description:'Описание 2'},
-                                        {key:3, title:"Мероприятие 3", date:'18:02', location:"Р-303", member:"111", description:'Описание 3'},
-                                        {key:4, title:"Мероприятие 4", date:'18:04', location:"Р-304", member:"1111", description:'Описание 4'}
-                                        ].map(index => {
+                                    this.state.card.map(event_id => {
                                         return (
-                                            <Link style={styles} to={"/event/" + index + 1}>
+                                            <Link style={styles} to={"/api/events/" + event_id.pk}>
                                                 <ShowCardDescription
-                                                    idx={index}
+                                                    idx={event_id}
                                                     isToggleOn={this.state.isToggleOn}
                                                     handleClick={this.handleClick}
-                                                    name={index.title}
-                                                    time={index.date}
-                                                    place={index.location}
+                                                    name={event_id.title}
+                                                    time={event_id.date}
+                                                    place={event_id.place}
                                                 >
-                                                    <Route
-                                                        path="/event/:index"
-                                                        render={props => {
-                                                            return <Description
-                                                                name={index.title}
-                                                                date={index.date}
-                                                                place={index.location}
-                                                                member={index.member}
-                                                                description={index.description}
-                                                            />
-                                                        }}
-                                                    />
+                                                    <Switch>
+                                                        <Route path='/' exact render={() => <MainContent /> } />
+                                                        <Route
+                                                            path="/api/events/:event_id"
+                                                            render={props => {
+                                                                return <Description
+                                                                    name={event_id.title}
+                                                                    date={event_id.date}
+                                                                    place={event_id.place}
+                                                                    member={event_id.member}
+                                                                    description={event_id.description}
+                                                                    image={event_id.image}
+                                                                />
+                                                            }}
+                                                        />
+                                                    </Switch>
                                                 </ShowCardDescription>
                                             </Link>
                                         );
@@ -69,38 +86,71 @@ class MainContent extends React.Component {
                         <div className="inside-container block tab-2 ">
                             <div id='wrapp'>
                                 {
-                                    [
-                                        {key:1, title:"Мероприятие 1", date:'18:00', location:"Р-301", member:"1", description:'Описание 1'},
-                                        {key:2, title:"Мероприятие 2", date:'18:01', location:"Р-302", member:"11", description:'Описание 2'},
-                                        {key:3, title:"Мероприятие 3", date:'18:02', location:"Р-303", member:"111", description:'Описание 3'}
-                                    ].map(index => {
+                                    this.state.card.map(event_id => {
                                         return (
-                                            <Link style={styles} to={"/event/" + index + 1}>
+                                            <Link style={styles} to={"/api/events/" + event_id.pk}>
                                                 <ShowCardDescription
-                                                    idx={index}
+                                                    idx={event_id}
                                                     isToggleOn={this.state.isToggleOn}
                                                     handleClick={this.handleClick}
-                                                    name={index.title}
-                                                    time={index.date}
-                                                    place={index.location}
+                                                    name={event_id.title}
+                                                    time={event_id.date}
+                                                    place={event_id.place}
                                                 >
-                                                    <Route
-                                                        path="/event/:index"
-                                                        render={props => {
-                                                            return <Description
-                                                                name={index.title}
-                                                                date={index.date}
-                                                                place={index.location}
-                                                                member={index.member}
-                                                                description={index.description}
-                                                            />
-                                                        }}
-                                                    />
+                                                    <Switch>
+                                                        <Route path='/' exact render={() => <MainContent /> } />
+                                                        <Route
+                                                            path="/api/events/:event_id"
+                                                            render={props => {
+                                                                return <Description
+                                                                    name={event_id.title}
+                                                                    date={event_id.date}
+                                                                    place={event_id.place}
+                                                                    member={event_id.member}
+                                                                    description={event_id.description}
+                                                                    image={event_id.image}
+                                                                />
+                                                            }}
+                                                        />
+                                                    </Switch>
                                                 </ShowCardDescription>
                                             </Link>
                                         );
                                     })
                                 }
+                                {/*{*/}
+                                {/*    [*/}
+                                {/*        {event_id:1, title:"Мероприятие 1", date:'18:00', location:"Р-301", description:'Описание 1'},*/}
+                                {/*        {event_id:2, title:"Мероприятие 2", date:'18:01', location:"Р-302", description:'Описание 2'},*/}
+                                {/*        {event_id:3, title:"Мероприятие 3", date:'18:02', location:"Р-303", description:'Описание 3'}*/}
+                                {/*    ].map(event_id => {*/}
+                                {/*        return (*/}
+                                {/*            <Link style={styles} to={"/api/events/" + event_id.event_id}>*/}
+                                {/*                <ShowCardDescription*/}
+                                {/*                    idx={event_id.event_id}*/}
+                                {/*                    isToggleOn={this.state.isToggleOn}*/}
+                                {/*                    handleClick={this.handleClick}*/}
+                                {/*                    name={event_id.title}*/}
+                                {/*                    time={event_id.date}*/}
+                                {/*                    place={event_id.location}*/}
+                                {/*                >*/}
+                                {/*                    <Route*/}
+                                {/*                        path="/api/events/:event_id"*/}
+                                {/*                        render={props => {*/}
+                                {/*                            return <Description*/}
+                                {/*                                name={event_id.title}*/}
+                                {/*                                date={event_id.date}*/}
+                                {/*                                place={event_id.location}*/}
+                                {/*                                member={event_id.member}*/}
+                                {/*                                description={event_id.description}*/}
+                                {/*                            />*/}
+                                {/*                        }}*/}
+                                {/*                    />*/}
+                                {/*                </ShowCardDescription>*/}
+                                {/*            </Link>*/}
+                                {/*        );*/}
+                                {/*    })*/}
+                                {/*}*/}
                             </div>
                         </div>
                     </div>

@@ -1,9 +1,11 @@
 header {
     min-height:72px;
-    width:100%;
     background: #fff;
     box-shadow: 0 1px 28px rgba(0, 0, 0, 0.25);
+    top:0;
+    z-index:5;
 }
+
 
 header .wrapper ul {
     display:-webkit-flex;
@@ -17,8 +19,7 @@ header .wrapper ul {
 
 .search {
     color: #767;
-    min-width: 444px;
-    max-width: 100%;
+    width: 444px;
     height: 40px;
     background: #EDEDED;
     border-radius: 70px;
@@ -34,7 +35,7 @@ header .wrapper ul {
 
 .pic-search {
     position: absolute;
-    top: 22px;
+    top: 23px;
     margin-left: 10px;
 }
 
@@ -50,7 +51,9 @@ header .wrapper ul {
     line-height:36px;
     text-align: center;
     cursor:pointer;
+    outline:none;
 }
+
 
 a .pic-logo {
     position:relative;
@@ -72,3 +75,4 @@ a .pic-logo {
     text-align:left;
     text-indent:40px;
 }
+

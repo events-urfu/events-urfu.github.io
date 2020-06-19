@@ -1,0 +1,61 @@
+/*:root{*/
+/*    --logo-size:400px;*/
+/*    --logo-half-size:40px;*/
+/*}*/
+/*#preloader{*/
+/*    position: fixed;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    z-index: 999;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    overflow: visible;*/
+/*    background: #E7DFDD;*/
+/*}*/
+
+/*.visible {*/
+/*    visibility: visible;*/
+/*    opacity: 1;*/
+/*}*/
+
+/*.hidden {*/
+/*    visibility: hidden;*/
+/*    opacity: 0;*/
+/*    transition: visibility 0s 1.5s, opacity 1.5s linear;*/
+/*}*/
+
+/*.preloader__image_animate{*/
+/*    background-image: url('https://psv4.userapi.com/c816338/u114165366/docs/af6f166e0f34/a163d1a289b9fdcee0d498234630649f_187945_1512468655.gif?extra=PJ7Ih8aWCax0IrTc2lWPHkWJmtUSiPrJPwIwLHGHQq-pRpNlMezDFMrY5nS5DIgnwXxaZeNCYvEAmY05hwRl6DCzQzaZAZmxWObQTgqyPb45K16-HeZ_IYDzR_DWFZvswEDBcixyhNy5meU6ulDwNEVRBPM');*/
+/*    background-size: var(--logo-size) var(--logo-size);*/
+/*    width: var(--logo-size);*/
+/*    height: var(--logo-size);*/
+/*    position: fixed;*/
+/*    top: 170px;*/
+/*    left: 570px;*/
+/*    transition: 1s linear;*/
+/*    !*animation: up-down 1s infinite;*!*/
+/*}*/
+/*@keyframes up-down{*/
+/*    0%{*/
+/*        top: calc(50% - var(--logo-half-size));*/
+/*    }*/
+/*    0%{*/
+/*        top: calc(50% - 10px);*/
+/*    }*/
+/*    75%{*/
+/*        top: calc(50%);*/
+/*    }*/
+/*    100%{*/
+/*        top: calc(50% - 10px);*/
+/*    }*/
+/*    !*from{*!*/
+/*    !*    -webkit-transform: rotate(0deg);*!*/
+/*    !*    -o-transform: rotate(0deg);*!*/
+/*    !*    transform: rotate(0deg);*!*/
+/*    !*}*!*/
+/*    !*to{*!*/
+/*    !*    -webkit-transform: rotate(360deg);*!*/
+/*    !*    -o-transform: rotate(360deg);*!*/
+/*    !*    transform: rotate(360deg);*!*/
+/*    !*}*!*/
+/*}*/

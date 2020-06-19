@@ -5,6 +5,9 @@ import '../styles/header-styles.css';
 
 import logo from '../img/logo_1.png';
 import search from '../img/search.svg';
+import Search from "../search";
+import Tabled from "./table-search";
+
 
 function Header(){
     return (
@@ -13,7 +16,10 @@ function Header(){
                 <div className="container-signin">
                     <ul>
                         <li className="logo"><a href="https://loozmax.github.io/event-urfu/"><img alt="#" className="pic-logo" src={logo}/></a></li>
-                        <li><img alt='#' className='pic-search' src={search}/><input className="search" placeholder="Поиск по мероприятиям и датам (dd:mm:yyyy)"/></li>
+                        <li ><img alt='#' className='pic-search' src={search}/>
+                        <input onChange={Search} className="search" placeholder="Ищете какое-то мероприятие?"/>
+                        </li>
+                        <Tabled />
                         <App />
                     </ul>
                 </div>

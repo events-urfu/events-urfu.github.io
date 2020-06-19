@@ -1,3 +1,4 @@
+
 let Tab = function () {
     let tabNav = document.querySelectorAll('.nav'),
         tabContent = document.querySelectorAll('.block'),
@@ -22,6 +23,20 @@ let Tab = function () {
         })
     }
 };
+
+// function loadData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(resolve, 500);
+//     })
+// }
+//
+// loadData()
+//     .then(() => {
+//         let preloaderEl = document.getElementById('preloader');
+//         preloaderEl.classList.add('hidden');
+//         preloaderEl.classList.remove('visible');
+//     });
+
 
 export default Tab;
 

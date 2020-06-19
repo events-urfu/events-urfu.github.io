@@ -4,7 +4,7 @@
     border-radius: 10px;
     background: #fff;
     position: fixed;
-    z-index: 1000;
+    z-index: 100550;
     top: 0;
     right: 0;
     bottom: 0;
@@ -21,6 +21,9 @@
 }
 
 .vk {
+    text-align:center;
+    padding-top:12px;
+    padding-left:15px;
     display:block;
     width: 360px;
     height: 56px;
@@ -28,7 +31,7 @@
     border: 2px solid #4A76A8;
     border-radius: 10px;
     outline:none;
-    font-size:16px;
+    font-size:19px;
     color: #4A76A8;
     background:#fff;
     cursor:pointer;
@@ -66,9 +69,10 @@
     margin-top:70px;
 }
 
-.info-login input {
+.input-email,
+.input-pass {
     display:block;
-    margin:12px auto;
+    margin:15px auto;
     width: 360px;
     height: 56px;
     background: #EDEDED;
@@ -76,7 +80,6 @@
     outline:none;
     border:1px solid #EDEDED;
     padding:17px;
-    color:#000;
     font-size:16px;
 }
 
@@ -85,10 +88,12 @@
     color: #767676;
     text-align:center;
     padding-left:230px;
+    margin-top:60px;
 }
 
 .iForgotPassword:hover {
     color: #A54657;
+    text-decoration:underline;
 }
 
 .enter-button {
@@ -97,11 +102,11 @@
     background: #A54657;
     border-radius: 10px;
     outline:none;
-    border:1px solid #A54657;
+    border:0;
     color:#fff;
     font-size:16px;
     display:block;
-    margin: 25px auto;
+    margin: 20px auto;
     cursor:pointer;
 }
 
@@ -115,22 +120,6 @@
     border:1px solid #DF667C;
 }
 
-.registration {
-    cursor:pointer;
-    width: 227px;
-    height: 19px;
-    color:#767;
-    font-size:16px;
-    text-decoration:underline;
-    text-align:center;
-    margin:70px auto;
-}
-
-
-.registration:hover {
-    color:#000;
-}
-
 .overlay {
     top:0;
     bottom:0;
@@ -141,6 +130,43 @@
     width:1350px;
     height:100%;
     position:fixed;
+}
+
+.first-block {
+    position:absolute;
+    z-index:55;
+    width:600px;
+    height:1510px;
+    top:-100px;
+    right:440px;
+}
+
+.second-block {
+    position:absolute;
+    z-index:55;
+    width:600px;
+    height:1510px;
+    top:-100px;
+    left:440px;
+}
+
+.top-block {
+    position:absolute;
+    z-index:55;
+    width:1600px;
+    height:100px;
+    top:-105px;
+    left:-550px;
+    margin:0 auto;
+}
+
+.bottom-block {
+    position:absolute;
+    z-index:55;
+    width:1600px;
+    height:50px;
+    bottom:-53px;
+    right:-600px;
 }
 
 

@@ -101,8 +101,8 @@
     max-width:369px;
     height:197px;
     margin-bottom:110px;
-    background:url("../img/gradient.jpg") center;
-    background-size:cover;
+    /*background:url("../img/gradient.jpg") center;*/
+    /*background-size:cover;*/
     position:relative;
     cursor:pointer;
 }
@@ -127,6 +127,7 @@
     font-size:22px;
     position:relative;
     bottom:100px;
+    font-weight:bold
 }
 
 .block {
@@ -155,7 +156,7 @@
 
 .event-place {
     text-align:left;
-    text-indent:48px;
+    text-indent:134px;
 }
 
 .event-time {
@@ -182,10 +183,9 @@
 .event-place p:before {
     content:'';
     position:absolute;
-    width:15px;
-    height:21px;
-    background:url("../img/location.svg") center no-repeat;
+    width:16px;
+    height:23px;
+    background:url("../img/location (1).svg") center no-repeat;
     background-size:cover;
-    left:25px;
+    left:106px;
 }
-/*===*/

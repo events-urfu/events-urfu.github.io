@@ -1,32 +1,64 @@
-#wrapp {
-    width:100%;
-    height:auto;
-    display:flex;
-    justify-content:center;
-    margin:0 auto;
-    position:relative;
-    flex-flow:row wrap;
-}
+/*#wrapp {*/
+/*    width:100%;*/
+/*    height:auto;*/
+/*    display:flex;*/
+/*    justify-content:center;*/
+/*    margin:0 auto;*/
+/*    position:relative;*/
+/*    flex-flow:row wrap;*/
+/*    border:3px solid red;*/
+/*    z-index:5;*/
+/*}*/
 
+.about-block p {
+    color: #000;
+    font-size: 20px;
+    margin-bottom:70px;
+}
 
 .content {
     width:100%;
-    height:750px;
+    height:auto;
     background:#fff;
-    position:absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
-    margin: -95px auto;
-    z-index:1;
+    margin-top:-95px;
+    position:relative;
+    z-index:4;
     border-radius:10px;
-    cursor:default;
 }
+
+/*.cont {*/
+/*    width:1230px;*/
+/*    height:750px;*/
+/*    background: #fff;*/
+/*    position:fixed;*/
+/*    top:0;*/
+/*    bottom:0;*/
+/*    right:0;*/
+/*    left:0;*/
+/*    margin:112px auto;*/
+/*    z-index:4;*/
+/*    border-radius:10px;*/
+
+/*}*/
+
+/*.content {*/
+/*    width:1000px;*/
+/*    height:750px;*/
+/*    background:#fff;*/
+/*    position:absolute;*/
+/*    top:0;*/
+/*    bottom:0;*/
+/*    right:0;*/
+/*    left:0;*/
+/*    z-index:1;*/
+/*    border-radius:10px;*/
+/*    cursor:default;*/
+/*    border:2px solid #000;*/
+/*    margin:100px auto;*/
+/*}*/
 
 .description-pic {
     margin:60px 0 0 98px;
-    border:1px solid black;
     width:450px;
     height:250px;
     border-radius:10px;
@@ -38,6 +70,7 @@
     margin-right:35px;
     float:right;
     width:600px;
+    clear:both;
 }
 
 .data p {
@@ -54,8 +87,8 @@
 .data-cab,
 .data-member {
     display:inline-block;
+    font-weight:600;
 }
-
 
 .data-time {
     text-indent: 27px;
@@ -64,9 +97,9 @@
 
 .data-time:before{
     content:'';
-    width:17px;
-    height:17px;
-    background:url('../img/clock_1.svg') no-repeat;
+    width:20px;
+    height:20px;
+    background:url('../img/clock.svg') no-repeat;
     position:absolute;
     left:1px;
     top:2px;
@@ -94,18 +127,29 @@
     left:25px;
 }
 
+.data-member:before {
+    content:'';
+    position:absolute;
+    background:url('../img/person.svg') no-repeat;
+    width:19px;
+    height:19px;
+    top:2px;
+    left:25px;
+
+}
+
 .data-button {
     display:flex;
 }
 
 .close {
     position:absolute;
+    cursor:pointer;
+    z-index:11;
     top:0;
     right:0;
-    padding:15px;
-    cursor:pointer;
+    padding:10px;
 }
-
 
 .about {
     margin-left:98px;
@@ -154,35 +198,70 @@
     font-size:20px;
 }
 
-
 .data input {
     margin-top:20px;
 }
 
 .event-form {
+    border-radius:8px;
+    background:url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2044837-jpeg.jpg") no-repeat center ;
+    background-size:cover;
     width:550px;
-    height:100%;
+    height:auto;
     position:absolute;
     top:0;
     left:0;
     z-index:3;
     box-shadow:3px 3px 3px #999;
-    background:#E5EFF3
 }
-
 
 .input-name,
 .input-group {
+    background-size: 0% 100%, 100% 100%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: all .2s ease-in;
+    background-image: linear-gradient(0deg, #c41616 2px,rgba(156,39,176,0) 0),linear-gradient(0deg,#d2d2d2 1px,hsla(0,0%,82%,0) 0);
     display:block;
     outline:none;
-    margin:20px auto;
+    margin:40px auto;
     width:400px;
     height:1px;
     padding:30px;
     font-size:16px;
-    border-radius:10px;
-    box-shadow:1px 1px 5px #000;
-    border:1px solid #fff;
+    border: 0;
+    border-radius:12px;
+}
+
+.clicked {
+    width:50%;
+    float:right;
+    margin-top:-30px;
+    margin-right:15px;
+}
+
+.asteriks1,
+.asteriks2 {
+    position:absolute;
+    color:red;
+}
+
+.asteriks1 {
+    top:300px;
+    right:65px;
+}
+
+.asteriks2 {
+    top:401px;
+    right:65px;
+}
+
+.input-name:focus,
+.input-group:focus,
+.input-name:hover,
+.input-group:hover {
+    background-size: 100% 100%, 100% 100%;
+
 }
 
 .container-input {
@@ -196,27 +275,29 @@
 .like,
 .share {
     margin-left:30px;
-    margin-top:25px;
+    margin-top:28px;
     cursor:pointer;
 }
 
 
 .send-form {
-    width:100px;
-    height:50px;
-    margin:70px auto;
-    display:block;
-    border-radius:10px;
+    width: 150px;
+    text-align:center;
+    height: 50px;
+    margin: 70px auto;
+    display: block;
+    background: #FF779E;
+    border: 0;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
     outline:none;
-    background:#FF779E;
-    border:0;
-    color:#fff;
-    font-size:15px;
 }
 
 .send-form:hover {
     box-shadow:3px 3px 5px #FF3870;
 }
+
 
 .title-form {
     text-align:center;
@@ -237,3 +318,28 @@ ol {
     margin-bottom:70px;
     margin-left:20px;
 }
+
+.warning_first,
+.warning_second {
+    z-index:5;
+    position:absolute;
+    font-size:20px;
+    color:#000;
+}
+
+.require {
+    position:absolute;
+    width:430px;
+    height:50px;
+    line-height:50px;
+    background: rgba(255, 255, 255, 1);
+    text-align:center;
+    color:#000;
+    display:none;
+    bottom:100px;
+}
+
+.hidn {
+    display:block;
+}
+

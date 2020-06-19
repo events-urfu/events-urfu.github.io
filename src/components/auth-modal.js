@@ -4,12 +4,13 @@ import React from "react";
 
 import '../styles/auth-style.css';
 import '../styles/header-styles.css';
-import {Route, BrowserRouter, NavLink} from "react-router-dom";
+import {Route, BrowserRouter, NavLink, Switch} from "react-router-dom";
 
 
 const style = {
     color:'#000'
 }
+
 class App extends React.Component {
 
     constructor(props){
@@ -19,8 +20,8 @@ class App extends React.Component {
     }
 
     showHidePopup(){
-        let isShow = this.state.isShow;
-        this.setState({isShow: !isShow});
+        console.log(this.state.isShow);
+        this.setState({isShow: !this.state.isShow});
     }
 
     render() {
@@ -28,10 +29,12 @@ class App extends React.Component {
             <div>
                 <div>
                     <BrowserRouter>
-                        <li onClick={this.showHidePopup} className="sign-in"><NavLink style={style} to='/sign_up'>Вход</NavLink></li>
-                        <Route path='/sign_up'>
-                            {this.state.isShow ? <Authorisation /> : null}
-                        </Route>
+                        <button onClick={this.showHidePopup} className="sign-in"><NavLink style={style} to='/sign_up'>Вход</NavLink></button>
+                        <Switch>
+                            <Route path='/sign_up'>
+                                {this.state.isShow ? <Authorisation closePopup={this.showHidePopup} /> : null}
+                            </Route>
+                        </Switch>
                     </BrowserRouter>
                 </div>
             </div>
